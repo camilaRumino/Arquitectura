@@ -11,4 +11,6 @@ def index(request):
 
 def formulario(request):
     return render(request, 'formulario.html')
+def talleres(request):
+    return render(request, 'talleres.html')
 

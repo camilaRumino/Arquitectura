@@ -104,7 +104,7 @@ body{
     border:none;
     border-radius: 3px;
     color: rgb(209, 209, 209);
-    background: rgba(63, 114, 76, 0.7);
+    background: #5bc1ac !important;
 }
 
 .form-submit-btn input:hover{

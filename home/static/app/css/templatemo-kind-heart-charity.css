@@ -551,7 +551,7 @@ strong {
   width: inherit;
   height: inherit;
   line-height: inherit;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 
@@ -1510,6 +1510,8 @@ blockquote::before {
   .cta-section .row {
     padding-top: 50px;
     padding-bottom: 50px;
+    display: flex !important;
+    flex-wrap: wrap !important;
   }
 
   .volunteer-section::after {
