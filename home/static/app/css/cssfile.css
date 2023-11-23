@@ -1,17 +1,9 @@
-/*
-
-TemplateMo 581 Kind Heart Charity
-
-https://templatemo.com/tm-581-kind-heart-charity
-
-*/
-
 
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-Regular.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-Regular.woff') format('woff');
+    src: url('../fonts/Metropolis/Metropolis-Regular.otf') format('opentype'),
+        url('../fonts/Metropolis/Metropolis-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -19,8 +11,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-Light.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-Light.woff') format('woff');
+    src: url('../fonts/Metropolis/Metropolis-Light.otf') format('opentype'),
+        url('../fonts/Metropolis/Metropolis-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -28,8 +20,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-SemiBold.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-SemiBold.woff') format('woff');
+    src: url('../fonts/Metropolis/Metropolis-SemiBold.otf') format('opentype'),
+        url('../fonts/Metropolis/Metropolis-SemiBold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -37,12 +29,13 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 @font-face {
     font-family: 'Metropolis';
-    src: url('../fonts/Metropolis/Metropolis-Bold.woff2') format('woff2'),
-        url('../fonts/Metropolis/Metropolis-Bold.woff') format('woff');
+    src: url('../fonts/Metropolis/Metropolis-Bold.otf') format('opentype'),
+        url('../fonts/Metropolis/Metropolis-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+
 
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
@@ -295,18 +288,6 @@ strong {
   height: 25px;
   line-height: 30px;
 }
-
-
-/*---------------------------------------
-  AVATAR IMAGE - TESTIMONIAL, AUTHOR               
------------------------------------------*/
-.avatar-image {
-  border-radius: var(--border-radius-large);
-  width: 65px;
-  height: 65px;
-  object-fit: cover;
-}
-
 
 /*---------------------------------------
   CUSTOM BUTTON               
@@ -713,15 +694,16 @@ strong {
 
 
 /*---------------------------------------
-  VOLUNTEER              
+  ADULTO
+              
 -----------------------------------------*/
-.volunteer-section {
+.adultom-section {
   background: var(--secondary-color);
   position: relative;
   overflow: hidden;
 }
 
-.volunteer-section::after {
+.adultom-section::after {
   content: "";
   background: var(--primary-color);
   border-radius: 50%;
@@ -732,13 +714,13 @@ strong {
   height: 350px;
 }
 
-.volunteer-form {
+.adultom-form {
   background: var(--white-color);
   border-radius: var(--border-radius-medium);
   padding: 50px;
 }
 
-.volunteer-image {
+.adultom-image {
   border-radius: 100%;
   display: block;
   margin: auto;
@@ -747,92 +729,15 @@ strong {
   object-fit: cover;
 }
 
-.volunteer-section .custom-block-body {
+.adultom-section .custom-block-body {
   max-width: 440px;
   margin: 0 auto;
 }
 
-.volunteer-section .custom-block-body p {
+.adultom-section .custom-block-body p {
   line-height: 1.7;
 }
 
-
-/*---------------------------------------
-  DONATE              
------------------------------------------*/
-.donate-section {
-  background-image: url('../images/different-people-doing-volunteer-work.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
-
-.donate-form {
-  background: var(--white-color);
-  border-radius: var(--border-radius-medium);
-  position: relative;
-  overflow: hidden;
-  padding: 50px;
-}
-
-
-/*---------------------------------------
-  NEWS         
------------------------------------------*/
-.news-detail-header-section {
-  background-image: url('../images/news/close-up-volunteer-oganizing-stuff-donation.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
-
-.news-block-top {
-  border-radius: var(--border-radius-medium);
-  position: relative;
-  overflow: hidden;
-}
-
-.news-block-two-col-image-wrap {
-  border-radius: var(--border-radius-small);
-  position: relative;
-  overflow: hidden;
-  width: 150px;
-  margin-right: 20px;
-}
-
-.news-category-block {
-  background: var(--secondary-color);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 10px 20px;
-}
-
-.news-category-block .category-block-link {
-  color: var(--white-color);
-  margin-right: 10px;
-}
-
-.news-block-info {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.news-block-title-link {
-  color: var(--dark-color);
-}
-
-.news-detail-image {
-  display: block;
-  border-radius: var(--border-radius-medium);
-}
 
 blockquote {
   background: var(--section-bg-color);
@@ -1381,12 +1286,14 @@ blockquote::before {
     min-height: inherit;
   }
 
-  .volunteer-section::after {
+  .adultom
+-section::after {
     width: 450px;
     height: 450px;
   }
   
-  .volunteer-image {
+  .adultom
+-image {
     width: 350px;
     height: 350px;
   }
@@ -1514,7 +1421,8 @@ blockquote::before {
     flex-wrap: wrap !important;
   }
 
-  .volunteer-section::after {
+  .adultom
+-section::after {
     width: 300px;
     height: 300px;
   }
@@ -1542,7 +1450,8 @@ blockquote::before {
     height: 450px;
   }
 
-  .volunteer-image {
+  .adultom
+-image {
     width: 250px;
     height: 250px;
     margin: 0;
@@ -1553,7 +1462,8 @@ blockquote::before {
   }
 
   .custom-text-box,
-  .volunteer-form {
+  .adultom
+-form {
     padding: 30px;
   }
 
@@ -1632,12 +1542,14 @@ blockquote::before {
     height: 45px;
   }
 
-  .volunteer-image {
+  .adultom
+-image {
     width: 150px;
     height: 150px;
   }
 
-  .volunteer-section::after {
+  .adultom
+-section::after {
     width: 200px;
     height: 200px;
   }

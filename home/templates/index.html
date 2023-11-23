@@ -1,81 +1,6 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Adulto Activo</title>
-
-        <!-- CSS FILES -->        
-        <link href="../static/app/css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="../static/app/css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="../static/app/css/templatemo-kind-heart-charity.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-
-
-    </head>
-    
-    <body id="section_1">
-
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-8 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-geo-alt me-2"></i>
-                            Puente Alto, Santiago, Chile
-                        </p>
-
-                        <p class="d-flex mb-0">
-                            <i class="bi bi-envelope"></i>
-
-                            <a href="mailto:info@company.com">
-                                adultoactivo@puentealto.cl
-                            </a>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-
-        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index">
-                    <img src="../static/app/img/logo.png" class="logo img-fluid" alt="Adulto Activo">
-                    <span>
-                        Municipalidad de Puente Alto
-                        <small>Talleres para Adultos Mayores</small>
-                    </span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#top">Inicio</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Talleres</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="login">Ingresar</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
         <main>
 
@@ -87,7 +12,7 @@
                             <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="../static/app/img/c1.jpg" class="carousel-image img-fluid" alt="...">
+                                        <img src="{% static 'app/img/c1.jpg' %}" class="carousel-image img-fluid" alt="...">
                                         
                                         <div class="carousel-caption d-flex flex-column justify-content-end">
                                             <h1>Tercera edad</h1>
@@ -97,7 +22,7 @@
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="../static/app/img/c2.jpg" class="carousel-image img-fluid" alt="...">
+                                        <img src="{% static 'app/img/c2.jpg' %}" class="carousel-image img-fluid" alt="...">
                                         
                                         <div class="carousel-caption d-flex flex-column justify-content-end">
                                             <h1>Sin fines de lucro</h1>
@@ -107,7 +32,7 @@
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="../static/app/img/c3.jpg" class="carousel-image img-fluid" alt="...">
+                                        <img src="{% static 'app/img/c3.jpg' %}" class="carousel-image img-fluid" alt="...">
                                         
                                         <div class="carousel-caption d-flex flex-column justify-content-end">
                                             <h1>Variedad</h1>
@@ -144,8 +69,8 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="formulario" class="d-block">
-                                    <img src="../static/app/img/icons/hands.png" class="featured-block-image img-fluid" alt="">
+                                <a href="#section_3" class="d-block">
+                                    <img src="{% static 'app/img/icons/hands.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Únete a la <strong>comunidad</strong></p>
                                 </a>
@@ -154,8 +79,8 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="formulario" class="d-block">
-                                    <img src="../static/app/img/icons/heart.png" class="featured-block-image img-fluid" alt="">
+                                <a href="#section_3" class="d-block">
+                                    <img src="{% static 'app/img/icons/heart.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Haz un <strong>cambio</strong></p>
                                 </a>
@@ -164,8 +89,8 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="formulario" class="d-block">
-                                    <img src="../static/app/img/icons/receive.png" class="featured-block-image img-fluid" alt="">
+                                <a href="#section_3" class="d-block">
+                                    <img src="{% static 'app/img/icons/receive.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Beneficios para tu <strong>salud</strong></p>
                                 </a>
@@ -174,8 +99,8 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="formulario" class="d-block">
-                                    <img src="../static/app/img/icons/scholarship.png" class="featured-block-image img-fluid" alt="">
+                                <a href="#section_3" class="d-block">
+                                    <img src="{% static 'app/img/icons/scholarship.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Programa de <strong>Instructores</strong></p>
                                 </a>
@@ -198,7 +123,7 @@
                         <div class="col-lg-5 col-12">
                             <a href="#" class="me-4">¡Únete a nuestros talleres!</a>
 
-                            <a href="#section_4" class="custom-btn btn smoothscroll">Inscríbete</a>
+                            <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete</a>
                         </div>
 
                     </div>
@@ -206,7 +131,7 @@
             </section>
 
 
-            <section class="section-padding" id="section_3">
+            <section class="section-padding" id="section_2">
                 <div class="container">
                     <div class="row">
 
@@ -216,7 +141,7 @@
 
                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="custom-block-wrap">
-                                <img src="../static/app/img/zumba.jpg" class="custom-block-image img-fluid" alt="">
+                                <img src="{% static 'app/img/zumba.jpg' %}" class="custom-block-image img-fluid" alt="">
 
                                 <div class="custom-block">
                                     <div class="custom-block-body">
@@ -242,14 +167,14 @@
                                         </div>
                                     </div> 
 
-                                    <a href="formulario" class="custom-btn btn">Inscríbete ahora</a>
+                                    <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="custom-block-wrap">
-                                <img src="../static/app/img/yoga.jpg" class="custom-block-image img-fluid" alt="">
+                                <img src="{% static 'app/img/yoga.jpg' %}" class="custom-block-image img-fluid" alt="">
 
                                 <div class="custom-block">
                                     <div class="custom-block-body">
@@ -274,14 +199,14 @@
                                         </div>
                                     </div>
 
-                                    <a href="formulario" class="custom-btn btn">Inscríbete ahora</a>
+                                    <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="custom-block-wrap">
-                                <img src="../static/app/img/cueca.jpg" class="custom-block-image img-fluid" alt="">
+                                <img src="{% static 'app/img/cueca.jpg' %}" class="custom-block-image img-fluid" alt="">
 
                                 <div class="custom-block">
                                     <div class="custom-block-body">
@@ -300,13 +225,13 @@
                                             </p>
 
                                             <p class="ms-auto mb-0">
-                                                <strong>Goal:</strong>
+                                                <strong>Cupos totales:</strong>
                                                 25
                                             </p>
                                         </div>
                                     </div>
 
-                                    <a href="formulario" class="custom-btn btn">Inscríbete ahora</a>
+                                    <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -315,39 +240,44 @@
                 </div>
             </section>
 
-            <section class="volunteer-section section-padding" id="section_4">
+            <section class="adultom-section section-padding" id="section_3">
                 <div class="container">
                     <div class="row">
 
                         <div class="col-lg-6 col-12">
-                            <h2 class="text-white mb-4">Regístrate</h2>
+                            <h2 class="text-white mb-4">Únete a nuestros talleres</h2>
 
-                            <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                            <form class="custom-form adultom-form mb-5 mb-lg-0" action="#" method="post" role="form">
                                 <h3 class="mb-4">Regístrate</h3>
 
                                 <div class="row">
                                     <div class="col-lg-6 col-12">
-                                        <input type="text" name="volunteer-name" id="volunteer-name" class="form-control" placeholder="Ana Sánchez" required>
-                                    </div>
-
-                                    <div class="col-lg-6 col-12">    
-                                        <input type="email" name="volunteer-email" id="volunteer-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Anasanchez@gmail.com" required>
+                                        <strong>Nombre Apellido</strong>
+                                        <input type="text" name="adultom-name" id="adultom-name" class="form-control" placeholder="Ana Sánchez" required>
                                     </div>
 
                                     <div class="col-lg-6 col-12">
-                                        <input type="text" name="volunteer-subject" id="volunteer-subject" class="form-control" placeholder="12.345.678-K" required>
+                                        <strong>Correo electrónico</strong>
+                                        <input type="email" name="adultom-email" id="adultom-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="anasanchez@gmail.com" required>
                                     </div>
 
-                                    <div class="col-lg-6 col-12">                                        
-                                            <input type="text" id="volunteer-subject" name="volunteer-subject" class="form-control" placeholder="+569 123 45 678" required>
+                                    <div class="col-lg-6 col-12">
+                                        <strong>RUT</strong>
+                                        <input type="text" name="adultom-rut" id="adultom-rut" class="form-control" placeholder="12.345.678-K" required>
                                     </div>
 
-                                    <div class="col-lg-6 col-12">                                        
-                                        <input type="text" id="volunteer-subject" name="volunteer-subject" class="form-control" placeholder="Dirección" required>
+                                    <div class="col-lg-6 col-12">
+                                        <strong>Número de teléfono</strong>
+                                        <input type="text" name="adultom-tel" id="adultom-tel" class="form-control" placeholder="+56912345978" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <strong>Dirección</strong>                                      
+                                        <input type="text" name="adultom-dir" id="adultom-dir" class="form-control" placeholder="Av. Abuelitos 123" required>
                                     </div>
                                     <div class="col-lg-6 col-12">
-                                        <input type="text"
-                                                id="volunteer-subject" class="form-control" name="volunteer-subject" placeholder="10-10-1950" required>
+                                        <strong>Fecha de Nacimiento</strong>
+                                        <input type="text" name="adultom-fecnac" id="adultom-fecnac" class="form-control" placeholder="31-12-1950" pattern="\d{2}-\d{2}-\d{4}" title="Por favor ingrese la fecha en formato dd-mm-yyyy" required>
                                       </div>
                                 </div>
 
@@ -356,12 +286,12 @@
                         </div>
 
                         <div class="col-lg-6 col-12">
-                            <img src="../static/app/img/abus.jpg" class="volunteer-image img-fluid" alt="">
+                            <img src="{% static 'app/img/abus.jpg' %}" class="adultom-image img-fluid" alt="">
 
                             <div class="custom-block-body text-center">
                                 <h4 class="text-white mt-lg-3 mb-lg-3">Sobre el registro</h4>
 
-                                <p class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito Professional charity theme based</p>
+                                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iure eveniet ullam sequi obcaecati autem reprehenderit officia voluptates, fugiat id, exercitationem velit omnis. A, vitae ab. Molestiae inventore placeat in.</p>
                             </div>
                         </div>
 
@@ -370,93 +300,4 @@
             </section>
         </main>
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-12 mb-4">
-                        <img src="../static/app/img/logo.png" class="logo img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4">
-                        <h5 class="site-footer-title mb-3">Enlaces</h5>
-
-                        <ul class="footer-menu">
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Talleres</a></li>
-
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Instructores</a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                        <h5 class="site-footer-title mb-3">Contacto</h5>
-
-                        <p class="text-white d-flex mb-2">
-                            <i class="bi-telephone me-2"></i>
-
-                            <a href="tel: 120-240-9600" class="site-footer-link">
-                                +56 2 123 45 678
-                            </a>
-                        </p>
-
-                        <p class="text-white d-flex">
-                            <i class="bi-envelope me-2"></i>
-
-                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                                adultoactivo@puentealto.cl
-                            </a>
-                        </p>
-
-                        <p class="text-white d-flex mt-3">
-                            <i class="bi-geo-alt me-2"></i>
-                            Puente Alto, Santiago, Chile
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="site-footer-bottom">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-md-7 col-12">
-                            <p class="copyright-text mb-0">Copyright © 2036 <a href="#">Adulto Activo</a> Municipalidad de Puente Alto
-                        </div>
-                        
-                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-
-                                <li class="social-icon-item">
-                                    <a href="https://youtube.com" class="social-icon-link bi-youtube"></a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- JAVASCRIPT FILES -->
-        <script src="../static/app/js/jquery.min.js"></script>
-        <script src="../static/app/js/bootstrap.min.js"></script>
-        <script src="../static/app/js/jquery.sticky.js"></script>
-        <script src="../static/app/js/click-scroll.js"></script>
-        <script src="../static/app/js/counter.js"></script>
-        <script src="../static/app/js/custom.js"></script>
-
-    </body>
-</html>
+{% endblock %}
