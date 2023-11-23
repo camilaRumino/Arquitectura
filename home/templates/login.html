@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Ingresar</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="{% static 'app/css/login.css' %}" rel="stylesheet">
+    <link href="{% static 'app/css/cssfile.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        
+        <img src="{% static 'app/img/logo.png' %}" class="logo img-fluid center" alt="Logo Adulto Activo">
+        <h3>Ingresa aquí</h3>
+        <label for="username">Correo electrónico</label>
+        <input type="text" placeholder="Correo electrónico" id="email">
+
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="Contraseña" id="password">
+
+        <button>Ingresar</button>
+    </form>
+</body>
+</html>
