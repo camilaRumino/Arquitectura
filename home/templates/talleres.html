@@ -1,226 +1,64 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
         <body>
-           <!--aquí comienzan las cartas de talleres
-           <div class="main-bx" id="mnbxe">
-            <div class="secn-bx">
-              <div>
-                <img id="img-bx" src="https://images.unsplash.com/photo-1619441207978-3d326c46e2c9?w=500&auto=format" />
-              </div>
-        
-              <span class="tags">
-                <span class="tag1">Tag</span>
-                <span class="tag1">Tag</span>
-              </span>
-        
-              <div class="headr-name">Awesome</div>
-        
-              <p class="hdr-pr">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur
-                sodales morbi dignissim sed diam pharetra vitae ipsum odio Lorem ipsum
-                dolor sit..
-              </p>
-        
-              <div class="btncn" id="anim">
-                <div class="tooltip-container" onmouseenter="showTooltip()" onmouseleave="hideTooltip()">
-                  <button class="read-mr name-text" id="tooltp-shw" onmouseenter="showTooltip()" onmouseleave="hideTooltip()">
-                    Read more
-                  </button>
-                  <span class="tooltip-text" id="tooltipe">
-                    Stunning and a bit amazing isn't it how you just clicked or tried to click and hovered at first, to read more about it, isn't it. It
-                    just looks amazing this image isn't it. So elegant, So Beautiful
-                    Just looking like a holy cow, Oh my bad Its Looking Like a holy cow !. Again my bad, Looking like a wow !!. Don't go through the Grammar it could be should be a bit bad
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-           aquí terminan las cartas de talleres-->
            <section class="section-padding" id="section_2">
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-12 col-12 text-center mb-4">
                         <h2>Talleres</h2>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{% static 'app/img/zumba.jpg' %}" class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    <h5 class="mb-3">Zumba</h5>
-
-                                    <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</p>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Cupos disponibles:</strong>
-                                            25
-                                        
-                                        </p>
-
-                                        <p class="ms-auto mb-0">
-                                            <strong>Cupos totales:</strong>
-                                            35
-                                        </p>
-                                    </div>
-                                </div> 
-
-                                <a href="#section_3" class="custom-btn btn smoothscroll">Inscribirse</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{% static 'app/img/yoga.jpg' %}" class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    <h5 class="mb-3">Yoga</h5>
-
-                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus tempor</p>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Cupos disponibles:</strong>
-                                            30
-                                        </p>
-
-                                        <p class="ms-auto mb-0">
-                                            <strong>Cupos totales:</strong>
-                                            60
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="#section_3" class="custom-btn btn smoothscroll">Inscribirse</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="custom-block-wrap">
-                            <img src="{% static 'app/img/cueca.jpg' %}" class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    <h5 class="mb-3">Cueca</h5>
-
-                                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Cupos disponibles:</strong>
-                                            20
-                                        </p>
-
-                                        <p class="ms-auto mb-0">
-                                            <strong>Cupos totales:</strong>
-                                            25
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="#section_3" class="custom-btn btn smoothscroll">Inscribirse</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="row">
-
-                    <div class="col-lg-12 col-12 text-center mb-4">
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                    {% for taller in talleres %}
+                    <div class="col-4 mb-4">
                         <div class="custom-block-wrap">
-                            <img src="{% static 'app/img/baile.jpg' %}" class="custom-block-image img-fluid" alt="">
-
+                            <img src="{{ taller.imagen.url }}" class="custom-block-image img-fluid" alt="">
                             <div class="custom-block">
                                 <div class="custom-block-body">
-                                    <h5 class="mb-3">Baile entretenido</h5>
-
-                                    <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</p>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Cupos disponibles:</strong>
-                                            25
-                                        
-                                        </p>
-
-                                        <p class="ms-auto mb-0">
-                                            <strong>Cupos totales:</strong>
-                                            35
+                                    <h5 class="mb-3">{{ taller.nombre }}</h5>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minus beatae doloremque aliquid pariatur.</p>
+                                    <div class="d-flex align-items-center my-2">                                        
+                                        <p>
+                                            <strong>Días:</strong>
+                                            {{ taller.dia }}
+                                            <br><strong>Hora:</strong>
+                                            {{ taller.hora }}
+                                            <br><strong>Instructor:</strong>
+                                            {{ taller.instructor }}
+                                            <br><strong>Sala:</strong>
+                                            {{ taller.sala }}
                                         </p>
                                     </div>
                                 </div> 
-
-                                <a href="#section_3" class="custom-btn btn smoothscroll">Inscribirse</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{% static 'app/img/cocina2.jpg' %}" class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    <h5 class="mb-3">Cocina</h5>
-
-                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus tempor</p>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Cupos disponibles:</strong>
-                                            30
-                                        </p>
-
-                                        <p class="ms-auto mb-0">
-                                            <strong>Cupos totales:</strong>
-                                            60
-                                        </p>
+                                <a href="{% url 'inscripcion' taller.id %}" class="custom-btn btn smoothscroll">
+                                    Inscribirse
+                                  </a>
+                                  
+                                  <!-- Modal 
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Inscripción</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          Te has inscrito exitosamente!
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
+                                        </div>
+                                      </div>
                                     </div>
-                                </div>
-
-                                <a href="#section_3" class="custom-btn btn smoothscroll">Inscribirse</a>
+                                  </div>
+                                  -->
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="custom-block-wrap">
-                            <img src="{% static 'app/img/futbol.jpg' %}" class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    <h5 class="mb-3">Fútbol</h5>
-
-                                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus</p>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Cupos disponibles:</strong>
-                                            20
-                                        </p>
-
-                                        <p class="ms-auto mb-0">
-                                            <strong>Cupos totales:</strong>
-                                            25
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="#section_3" class="custom-btn btn smoothscroll">Inscribirse</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    {% endfor %}
                 </div>
             </div>
             
