@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+<section class="adultom-section section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12">
+                <h2 class="text-white mb-4">Únete a nuestros talleres</h2>
+
+                <form class="custom-form adultom-form mb-5 mb-lg-0" method="post" class="form-control">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit" class="form-control">Registrar</button>
+                </form>
+            </div>
+            
+
+            <div class="col-lg-6 col-12">
+                <img src="{% static 'app/img/abus.jpg' %}" class="adultom-image img-fluid" alt="">
+
+                <div class="custom-block-body text-center">
+                    <h4 class="text-white mt-lg-3 mb-lg-3">Sobre el registro</h4>
+
+                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iure eveniet ullam sequi obcaecati autem reprehenderit officia voluptates, fugiat id, exercitationem velit omnis. A, vitae ab. Molestiae inventore placeat in.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+{% endblock %}

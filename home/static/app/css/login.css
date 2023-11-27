@@ -41,7 +41,7 @@ body{
     bottom: -80px;
 }
 form{
-    height: 520px;
+    min-height: 520px;
     width: 400px;
     background-color: #f0f8ff7a;
     position: absolute;
@@ -107,3 +107,11 @@ button{
     margin-right: auto;
     margin-bottom: 10px;
   }
+
+.error-message {
+    background-color: #FFCCCC; /* light red */
+    border: 1px solid #8a0000; /* dark red */
+    color: #8a0000; /* dark red */
+    padding: 10px;
+    margin-bottom: 10px;
+}

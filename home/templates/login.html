@@ -15,12 +15,21 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form  method="post">
+    <form method="post">
         <a class="navbar-brand" href="{% url 'index' %}">
             <img src="{% static 'app/img/logo.png' %}" class="logo img-fluid center" alt="Logo Adulto Activo">
         </a>
-        <h3>Ingresa aquí</h3>
+        <h3 style="margin-bottom: 15px;">Ingresa aquí</h3>
+        
+    </div>
         {% csrf_token %}
+        {% if form.non_field_errors %}
+        <div class="error-message">
+            {% for error in form.non_field_errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+        {% endif %}
         {{ form.username.label_tag }} {{ form.username }}
         {{ form.password.label_tag }} {{ form.password }}
 

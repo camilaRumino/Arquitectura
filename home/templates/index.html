@@ -69,7 +69,7 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="#section_3" class="d-block">
+                                <a href="{% url 'registro' %}" class="d-block">
                                     <img src="{% static 'app/img/icons/hands.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Únete a la <strong>comunidad</strong></p>
@@ -79,7 +79,7 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="#section_3" class="d-block">
+                                <a href="{% url 'registro' %}" class="d-block">
                                     <img src="{% static 'app/img/icons/heart.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Haz un <strong>cambio</strong></p>
@@ -89,7 +89,7 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="#section_3" class="d-block">
+                                <a href="{% url 'registro' %}" class="d-block">
                                     <img src="{% static 'app/img/icons/receive.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Beneficios para tu <strong>salud</strong></p>
@@ -99,7 +99,7 @@
 
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="#section_3" class="d-block">
+                                <a href="{% url 'registro' %}" class="d-block">
                                     <img src="{% static 'app/img/icons/scholarship.png' %}" class="featured-block-image img-fluid" alt="">
 
                                     <p class="featured-block-text">Programa de <strong>Instructores</strong></p>
@@ -123,7 +123,7 @@
                         <div class="col-lg-5 col-12">
                             <a href="#" class="me-4">¡Únete a nuestros talleres!</a>
 
-                            <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete</a>
+                            <a href="{% url 'registro' %}" class="custom-btn btn smoothscroll">Inscríbete</a>
                         </div>
 
                     </div>
@@ -167,7 +167,7 @@
                                         </div>
                                     </div> 
 
-                                    <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
+                                    <a href="{% url 'registro' %}" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
 
-                                    <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
+                                    <a href="{% url 'registro' %}" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +231,7 @@
                                         </div>
                                     </div>
 
-                                    <a href="#section_3" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
+                                    <a href="{% url 'registro' %}" class="custom-btn btn smoothscroll">Inscríbete ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -240,64 +240,6 @@
                 </div>
             </section>
 
-            <section class="adultom-section section-padding" id="section_3">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <h2 class="text-white mb-4">Únete a nuestros talleres</h2>
-
-                            <form class="custom-form adultom-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                                <h3 class="mb-4">Regístrate</h3>
-
-                                <div class="row">
-                                    <div class="col-lg-6 col-12">
-                                        <strong>Nombre Apellido</strong>
-                                        <input type="text" name="adultom-name" id="adultom-name" class="form-control" placeholder="Ana Sánchez" required>
-                                    </div>
-
-                                    <div class="col-lg-6 col-12">
-                                        <strong>Correo electrónico</strong>
-                                        <input type="email" name="adultom-email" id="adultom-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="anasanchez@gmail.com" required>
-                                    </div>
-
-                                    <div class="col-lg-6 col-12">
-                                        <strong>RUT</strong>
-                                        <input type="text" name="adultom-rut" id="adultom-rut" class="form-control" placeholder="12.345.678-K" required>
-                                    </div>
-
-                                    <div class="col-lg-6 col-12">
-                                        <strong>Número de teléfono</strong>
-                                        <input type="text" name="adultom-tel" id="adultom-tel" class="form-control" placeholder="+56912345978" required>
-                                    </div>
-
-                                    <div class="col-lg-6 col-12">
-                                        <strong>Dirección</strong>                                      
-                                        <input type="text" name="adultom-dir" id="adultom-dir" class="form-control" placeholder="Av. Abuelitos 123" required>
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        <strong>Fecha de Nacimiento</strong>
-                                        <input type="text" name="adultom-fecnac" id="adultom-fecnac" class="form-control" placeholder="31-12-1950" pattern="\d{2}-\d{2}-\d{4}" title="Por favor ingrese la fecha en formato dd-mm-yyyy" required>
-                                      </div>
-                                </div>
-
-                                <button type="submit" class="form-control">Registrar</button>
-                            </form>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <img src="{% static 'app/img/abus.jpg' %}" class="adultom-image img-fluid" alt="">
-
-                            <div class="custom-block-body text-center">
-                                <h4 class="text-white mt-lg-3 mb-lg-3">Sobre el registro</h4>
-
-                                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iure eveniet ullam sequi obcaecati autem reprehenderit officia voluptates, fugiat id, exercitationem velit omnis. A, vitae ab. Molestiae inventore placeat in.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
         </main>
 
 {% endblock %}
