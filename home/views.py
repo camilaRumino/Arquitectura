@@ -74,3 +74,26 @@ def listar_talleres(request):
         'listaTalleres' : tallerAll
     }
     return render(request, 'talleres.html', datos)
+
+def listar_am(request):
+    request.session.set_expiry(3600)
+    registroAll = Usuario.objects.all()
+    datos = {
+        'listarAm' : registroAll
+    }
+    return render(request, 'listar_am.html', datos)
+
+def modificar_am(request, id):
+    usuario = Usuario.objects.get(id=id)
+    datos = {
+        'form' :RegistroForm(instance=usuario)
+    }
+    if request.method == 'POST':
+        formulario = RegistroForm(data=request.POST, instance=usuario)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje'] = '¡Usuario modificado correctamente!'
+            datos['form'] = formulario
+        else :
+            datos['mensaje'] = formulario.errors
+    return render(request, 'modificar_am.html', datos)

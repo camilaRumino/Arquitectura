@@ -15,5 +15,7 @@ urlpatterns = [
     path('inscripcion/<int:taller_id>/', inscripcion, name='inscripcion'),
     path('logout/', auth_views.LogoutView.as_view(next_page='index'), name='logout'),
     path('index-funcionarios/', FuncionarioIndexView.as_view(), name='index_funcionario'),
+    path('listar_am/', listar_am , name='listar_am'),
+    path('modificar_am/<id>/', modificar_am, name="modificar_am"),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

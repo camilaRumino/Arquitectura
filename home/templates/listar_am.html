@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="wrap">
+    <div  style="margin-top: 30px; margin-bottom: 30px; ">
+    
+      <div class="col s6" style="padding: 10px;">
+        <h4 class="centrar">Lista de usuarios</h4>
+      
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <table class="table table-condensed responsive-table table-striped">
+                    <thead>  
+                        <tr>
+                            <th>ID</th>
+                            <th>RUT</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDO</th>
+                            <th>CORREO</th>
+                            <th>FECHA DE NACIMIENTO</th>
+                            <th>OPCIONES</th>
+                            
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for aux in listarAm %}
+                        <tr>
+                            <td>{{ aux.id}}</td>
+                            <td>{{ aux.run }}</td>
+                            <td>{{ aux.nombre }}</td>
+                            <td>{{ aux.apellido }}</td>
+                            <td>{{ aux.correo }}</td>
+                            <td>{{ aux.fecnac }}</td>
+                          
+                            <td>
+                                <a href="{% url 'modificar_am' aux.id %}" class="waves-effect color-btn btn-small">Modificar</a>
+                                <a onclick="eliminarUsu({{ aux.id }})" class="waves-effect red darken-4 btn-small">Eliminar</a>
+                            </td>
+                            
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+  
+</div>
+</div>
+
+
+{% endblock %}
