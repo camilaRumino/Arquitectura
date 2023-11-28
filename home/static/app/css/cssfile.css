@@ -1677,3 +1677,12 @@ blockquote::before {
 .card:hover > .link:after {
   transform: translate(.2em, -.2em);
 }
+
+.confirmation-message {
+  background-color: #ccffd2;
+  border: 1px solid #008a30;
+  color: #008a30;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

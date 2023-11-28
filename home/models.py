@@ -1,12 +1,11 @@
+from django.contrib.auth.models import User
 from django.db import models
 
-# Create your models here.
-class Usuario(models.Model):
+class DetalleUsuario(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     run = models.CharField(max_length=12)
     nombre = models.CharField(max_length=60)
     apellido = models.CharField(max_length=60)
-    correo = models.CharField(max_length=50) 
-    contrasena = models.CharField(max_length=20)
     fecnac = models.DateField()
    
     def __str__(self):
@@ -24,7 +23,7 @@ class Taller(models.Model):
         return self.nombre
 
 class Inscripcion(models.Model):
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     taller = models.ForeignKey(Taller, on_delete=models.CASCADE)
 
     def __str__(self):

@@ -2,11 +2,20 @@
 {% load static %}
 {% block content %}
 
-<div id="wrap">
+<div>
     <div  style="margin-top: 30px; margin-bottom: 30px; ">
     
       <div class="col s6" style="padding: 10px;">
-        <h4 class="centrar">Lista de usuarios</h4>
+        {% if messages %}
+        <div class="confirmation-message">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+    
+
+        <h4 class="centrar">LISTA DE USUARIOS</h4>
       
         <div class="row">
           <form class="col s12">
@@ -27,18 +36,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {% for aux in listarAm %}
+                    {% for user in listarAm %}
                         <tr>
-                            <td>{{ aux.id}}</td>
-                            <td>{{ aux.run }}</td>
-                            <td>{{ aux.nombre }}</td>
-                            <td>{{ aux.apellido }}</td>
-                            <td>{{ aux.correo }}</td>
-                            <td>{{ aux.fecnac }}</td>
+                            <td>{{ user.id}}</td>
+                            <td>{{ user.detalleusuario.run }}</td>
+                            <td>{{ user.detalleusuario.nombre }}</td>
+                            <td>{{ user.detalleusuario.apellido }}</td>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.detalleusuario.fecnac }}</td>
                           
                             <td>
-                                <a href="{% url 'modificar_am' aux.id %}" class="waves-effect color-btn btn-small">Modificar</a>
-                                <a onclick="eliminarUsu({{ aux.id }})" class="waves-effect red darken-4 btn-small">Eliminar</a>
+                                <a href="{% url 'modificar_am' user.id %}" class="btn btn-success">Modificar</a>
+                                <a href="{% url 'eliminar_am' user.id %}" class="btn btn-danger">Eliminar</a>
                             </td>
                             
                         </tr>

@@ -30,25 +30,3 @@
     
   })(window.jQuery);
 
-  function eliminarUsu(id) {
-    Swal.fire({
-        icon: 'warning',
-        title: 'Estás seguro?',
-        text: 'No podrás deshacer la acción!',
-        showCancelButton: true,
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Si, Eliminar!",
-        confirmButtonColor: '#3085d6',
-        cancelButtonText: "Cancelar"
-      }).then((result) => {
-        if (result.value) {
-          Swal.fire(
-            'Eliminado!',
-            'Usuario eliminado Correctamente',
-            'success'
-          ).then(function() {
-            window.location.href = "/eliminar_usuario/"+ id +"/"
-          })
-        }
-      })
-  }

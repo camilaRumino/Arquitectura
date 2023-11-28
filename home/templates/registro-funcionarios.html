@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+<section class="adultom-section section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6 col-12">
+                <h2 class="text-white mb-4">Registrar nuevo Adulto Mayor</h2>
+
+                <form class="custom-form adultom-form mb-5 mb-lg-0" method="post" class="form-control">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit" class="form-control mt-4">Registrar</button>
+                </form>
+            </div>
+            
+
+        </div>
+    </div>
+</section>
+</body>
+{% endblock %}

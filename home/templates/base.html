@@ -78,6 +78,9 @@
                             <a class="nav-link click-scroll" href="{% url 'talleres' %}">Talleres</a>
                         </li>
                         <li>
+                            <a class="nav-link custom-btn custom-border-btn btn" href="{% url 'registro' %}">Regístrate</a>
+                        </li>
+                        <li>
                             <a class="nav-link custom-btn custom-border-btn btn" href="{% url 'login' %}">Ingresar</a>
                         </li>
                             {% endif %}
@@ -105,6 +108,8 @@
                             <li class="footer-menu-item"><a href="{% url 'talleres' %}" class="footer-menu-link">Talleres</a></li>
 
                             <li class="footer-menu-item"><a href="#" class="footer-menu-link">Instructores</a></li>
+
+                            <li class="footer-menu-item"><a href="{% url 'registro' %}" class="footer-menu-link">Registro</a></li>
 
                         </ul>
                     </div>
