@@ -6,6 +6,13 @@
            <section class="section-padding" id="section_2">
             <div class="container">
                 <div class="row">
+                  {% if messages %}
+                  <div class="confirmation-message">
+                      {% for message in messages %}
+                          {{ message }}
+                      {% endfor %}
+                  </div>
+                  {% endif %}
                     <div class="col-lg-12 col-12 text-center mb-4">
                         <h2>Talleres</h2>
                     </div>
@@ -34,27 +41,7 @@
                                 </div> 
                                 <a href="{% url 'inscripcion' taller.id %}" class="custom-btn btn smoothscroll">
                                     Inscribirse
-                                  </a>
-                                  
-                                  <!-- Modal 
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                      <div class="modal-content">
-                                        <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLabel">Inscripción</h5>
-                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                          Te has inscrito exitosamente!
-                                        </div>
-                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  -->
+                                </a>
                             </div>
                         </div>
                     </div>

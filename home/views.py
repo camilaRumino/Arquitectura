@@ -59,6 +59,7 @@ def talleres(request):
 def inscripcion(request, taller_id):
     taller = Taller.objects.get(id=taller_id)
     Inscripcion.objects.create(user=request.user, taller=taller)
+    messages.success(request, 'Inscrito en taller exitosamente')
     return redirect('talleres')
 
 
@@ -93,7 +94,6 @@ def modificar_am(request, id):
 def eliminar_am(request, id):
     usuario = User.objects.get(id=id)
     usuario.delete()
-    messages.success(request, 'Eliminado con éxito')
     return redirect('listar_am')
 
 # FUNCIONARIO
